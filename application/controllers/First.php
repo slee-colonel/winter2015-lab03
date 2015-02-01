@@ -7,19 +7,36 @@ class First extends Application {
     }
 
     //-------------------------------------------------------------
-    //  The normal pages
+    //  The first page
     //-------------------------------------------------------------
 
     function index() {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
-        // build the list of authors, to pass on to our view
+        
+        // call the function to grab the first quote data
         $record = $this->quotes->first();
         
+        // match up the data required by the justone page to the data given to us
         $this->data['mug'] = $record['mug'];
         $this->data['who'] = $record['who'];
         $this->data['what'] = $record['what'];
         
+        // render the page
         $this->render();
     }
 
+    function zzz() {
+        $this->data['pagebody'] = 'justone';    // this is the view we want shown
+        
+        // call the function to grab the first quote data
+        $record = $this->quotes->first();
+        
+        // match up the data required by the justone page to the data given to us
+        $this->data['mug'] = $record['mug'];
+        $this->data['who'] = $record['who'];
+        $this->data['what'] = $record['what'];
+        
+        // render the page
+        $this->render();
+    }
 }
