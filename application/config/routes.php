@@ -46,6 +46,7 @@ $route['lock\/[A-z/]*'] = "welcome/shucks";    // reroute to welcome::shucks
 $route['show/(:num)'] = "first/gimme/3";    // reroute to first::gimme/3
 $route['dunno'] = 'guess';  // reroute guess (new controller)
 $route['[A-z]{4,4}/bingo'] = 'bingo'; // reroute bingo (new controller)
+$route['comp(:num)/[A-z]*'] = 'bingo/wisdom'; // reroute bingo::wisdom
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
