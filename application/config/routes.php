@@ -40,7 +40,12 @@
 
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
-$route['last'] = "last/last";
+$route['last'] = "last/last";  // reroute to inside subfolder 'last'
+$route['sleep'] = "first/zzz";  // reroute to first::zzz
+$route['lock\/[A-z/]*'] = "welcome/shucks";    // reroute to welcome::shucks
+$route['show/(:num)'] = "first/gimme/3";    // reroute to first::gimme/3
+$route['dunno'] = 'guess';  // reroute guess (new controller)
+$route['[A-z]{4,4}/bingo'] = 'bingo'; // reroute bingo (new controller)
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
