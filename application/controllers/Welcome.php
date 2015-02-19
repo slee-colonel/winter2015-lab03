@@ -34,7 +34,7 @@ class Welcome extends Application {
     function shucks() {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
         
-        // call the function to grab the wanted quote data
+        // call the function to grab the second quote data
         $record = $this->quotes->get('2');
         
         // match up the data required by the justone page to the data given to us
